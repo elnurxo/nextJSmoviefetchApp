@@ -1,0 +1,76 @@
+1. start with talking about general information about next.js
+
+2. create an next.js application
+
+3. show difference between react.js application
+
+4. routing in next.js (files in pages directory)(index.js goes to '/' and 404.js goes if link doesn't exist)
+
+5. Link component to navigation in next.js (change bgc in browser to compare and difference between anchor tag, Link not refreshing)
+	client-side navigation (in JS not on browser which is faster than browser)
+
+6. Code splitting and prefetching (next.js does code splitting automatically, so each page only loads what’s necessary for that page,
+ prefetch (in production)-if link appears on page it's prefetching in the background(server-side) and keeps the data there)
+
+7. Assets/MetaData and CSS - 
+
+   7.1 Image - image tag cons - not optimizing image, loading whenever you run the project.
+	    next.js Image component - handles all above also takes WebP format. Images are lazy loaded by default.
+
+   Image from API bug - https://nextjs.org/docs/messages/next-image-unconfigured-host (add to next.config.js)
+
+   7.2 Head - built in Head component allows us to add head for each page such as metaTags or title
+
+   7.3-Script - How to implement 3rd party js files in next.js app??? - use Script built in component to add 3rd party js, under the end of Head component
+
+   7.4-CSS Styling - in styles folder there's 2 kinda style(module and global). next.js is css,scss and css-in-js(styles-jsx,styles-js...) supported.
+
+   7.5-Layout and Module Css- create a directory on top level(components), inside layout.js takes children as props returns children inside a div. then give it module style and
+	change wrapper to Layout in first-post.js
+
+   7.6-Global Style - in next.js you can only add global.css in app.js and not anywhere else.
+
+  ----------------------------------------------------------------------------------------
+
+8. Pre-rendering and data Fetching - next.js pre-renders static html at first, then js.. so even tho you disable js it'll work unlikely plain react.app
+  
+   8.1 Pre-Rendering forms (SSG and SSR) - difference is when it generates the HTML for page
+	-SSG(static site generation) - it's pre-rendering method that generates html at built time. And pre-rendered html is reused on each request(same one)
+	-SSR(server side rendering) - it's pre-rendering method that generates html on each request.
+	on deveolopment environment it's always SSR. but on production SSG will happen once, not on every request.
+	If page returns new data on each request, you have to use SSR.
+
+   8.2 SSG with and without DATA - It can be done with or without data (pages that don't require fetching external data).
+  	If you need fetching data or query database before rendering HTML there's SSG with data... (getStaticProps)
+	getStaticProps - below component export you write your getStaticProps async func and fetch data inside and return props then use it in component as taking props.
+	in development mode, getStaticProps runs on each request.
+
+   8.3 Fetching data at Request Time - SSR, on each request the data is fetched	and HTML is generated.
+	to use SSR we use getServerSideProps() method works just like the previous one
+	----------
+	CSR(client side rendering)- If you don't need to pre-render data on every request, you can use this.
+
+   8.4 SWR - Next.JS hook to fetch (it handles caching,revalidation,focus tracking,refetching or interval etc.)
+
+  swr - https://blog.logrocket.com/handling-data-fetching-next-js-useswr/
+  download package first
+
+------------------------------------------------------------------------------------------------------------------
+
+   9. Dymanic Routes - [@variable].js (If you want to create dynamic route it has to start and end with [...])
+	getStaticPaths,getStaticProps->takes {params}
+
+   10. getServerSideProps({params}) for movie detail page
+
+
+
+   11. Deploying NEXT.JS Project
+
+
+
+--------------TEST API TO FETCH MOVIES------------------
+get popular movies---
+https://api.themoviedb.org/3/movie/popular?api_key=3bcbf53467fc2d52de8e0d67324ce9cc&language=en-US&page=2
+get movie detail---
+https://api.themoviedb.org/3/movie/${params.id}?api_key=3bcbf53467fc2d52de8e0d67324ce9cc
+-----------------------------------------------------------------------------------------

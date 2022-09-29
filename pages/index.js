@@ -84,7 +84,7 @@ export default function Home({res}) {
 }
 
 export async function getStaticProps(){
- const req = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=3bcbf53467fc2d52de8e0d67324ce9cc&language=en-US&page=2');
+ const req = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=3bcbf53467fc2d52de8e0d67324ce9cc&language=en-US&page=3');
  const res = await req.json();
   console.log('data loaded');
   return {
@@ -92,4 +92,4 @@ export async function getStaticProps(){
       res 
     }
   };
-}
+} 

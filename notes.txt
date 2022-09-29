@@ -1,0 +1,88 @@
+--------------TEST API TO FETCH MOVIES------------------
+get popular movies---
+https://api.themoviedb.org/3/movie/popular?api_key=3bcbf53467fc2d52de8e0d67324ce9cc&language=en-US&page=2
+get movie detail---
+https://api.themoviedb.org/3/movie/${params.id}?api_key=3bcbf53467fc2d52de8e0d67324ce9cc
+-------------------------------------------------------- ---------------------------------
+
+
+NEXT.JS NEDIR?
+	-------------------OVERALL-------------------
+ - Next.js Vercel tərəfindən yaradılmış openSource framework-dur və React əsaslı web proqramları server tərəfində göstərmə və statik veb saytlar yaratmaq imkanı verir.
+Reakct documantation-da "Recommended Toolchains" arasında Next.js-ni qeyd edir və "Node.js ilə server tərəfindən render olunan web-saytın qurulması" zamanı 
+onu developer-lərə həll yolu kimi tövsiyə edir. Ənənəvi React proqramları öz contentini yalnız müştəri tərəfi brauzerində göstərə bildiyi halda, Next.js bu funksiyanı server 
+tərəfində render etmək üçün də genişləndirir.
+
+open source - https://github.com/vercel/next.js
+
+npm command - npm i next
+
+weekly downloads - 3.1 million
+latest version - 12.3.1 (5 days ago)
+community - Next.js Discord(https://discord.com/invite/nextjs)  & Github(https://github.com/vercel/next.js/discussions)
+
+	-------------------HISTORY-------------------
+ - Next.js ilk dəfə 6 il əvvəl, 25 oktyabr 2016-cı ildə GitHub-da açıq mənbəli layihə olaraq buraxıldı. 
+O, ilkin olaraq aşağıdakı prinsiplər əsasında hazırlanmışdır: 
+1.heç bir quraşdırma tələb etməyən hazır funksionallıq, 
+2.bütün funksiyalar JavaScript-də yazılır, 
+3.avtomatik kod splitting və server renderi,
+4.konfiqurasiya edilə bilən məlumatların fetch edilməsi, 
+5.sorğuların gözlənilməsi və deployment-in sadələşdirilməsi.
+
+Next.js 2.0 2017-ci ilin mart ayında kiçik websaytlarla işləməyi asanlaşdıran bir sıra təkmilləşdirmələr ilə elan edildi.
+Next.js 7.0 versiyası 2018-ci ilin sentyabrında təkmilləşdirilmiş error handling və dinamik routing-in
+idarə edilməsi üçün React-ın kontekst API support-u ilə buraxıldı. Bu, həm də web paketinə yüksələn ilk versiya idi.
+Next.js 8.0 verisyası 2019-cu ilin fevral ayında buraxıldı və serversiz deployu təklif edən ilk versiya idi.(eyni zamanda kodlar lazım olduqda çağırılan lambda
+function-lara bölünmüşdü). Bu versiya həmçinin statik ixrac üçün tələb olunan vaxtı və resursları azaldıb və qabaqcadan yükləmə performansını yaxşılaşdırıb.
+Next.js 9.3 - 2020-ci ilin mart ayında elan edilmiş 9.3 versiyasına müxtəlif optimallaşdırmalar və qlobal Sass və CSS modul dəstəyi daxildir.
+Next.js 11 - 15 iyun 2021-ci ildə buraxıldı və digərləri ilə yanaşı təqdim edildi: Webpack 5 dəstəyi, real vaxt rejimində birgə kodlaşdırma funksiyasının 
+"Next.js Live" ilkin baxışı və Create React App-dən Next.js-ə miqrasiya "Create React App Migration".
+Next.js 12 -26 oktyabr 2021-ci ildə buraxıldı və kompilyasiyanı daha sürətli edən Rust kompilyatoru, AVIF dəstəyi bir neçə özəllik gətirdi.
+
+	-------------------STYLING AND FEATURES-------------------
+Next.js CSS, SCSS(SASS), CSS-in-JS və styled-JSX dəstəkləyir.
+Next.js-in əsas xüsusiyyəti web-brauzerlər üzərindəki yükü azaltmaq və gücləndirilmiş təhlükəsizliyi təmin etmək üçün server-side renderdən istifadə etməsidir.
+Bu, proqramın istənilən hissəsi və ya bütün layihə üçün edilə bilər ki, bu da content-lə zəngin səhifələrin server tərəfində göstərilməsi üçün seçilməsinə imkan verir.
+Bu, yalnız ilk dəfə ziyarət edənlər üçün, saytın aktivlərindən(assets) heç birini yükləməmiş veb brauzerlərin yükünü azaltmaq üçün də edilə bilər.
+
+	-------------------BACKGROUND OF NEXT.JS-------------------
+Next.js bir neçə əlavə funksiyaları, o cümlədən server-side rendering və statik web saytların yaradılmasını təmin edən React framework-üdür. Javascript,Typescrit və Rust üzərində
+yazılmışdır. React-da yaradılmış webApp-lər client-side-da(browser) render olunur. Developer-lər bu strategiyada bir neçə problemlə üzləşir. Məsələn:
+ - JavaScript-ə çıxışı olmayan və ya onu deaktiv etmiş istifadəçilərə xidmət göstərməmək.
+ - potensial təhlükəsizlik problemləri,
+ - səhifənin yüklənmə müddətinin əhəmiyyətli dərəcədə uzadılması,
+ - saytın ümumi axtarış motorunun optimallaşdırılmasına zərər(SEO -search engine optimization).
+
+Next.js kimi framework-lər müştəriyə göndərilməzdən əvvəl web-saytın bir hissəsini və ya hamısını server tərəfində göstərməyə icazə verməklə bu problemlərin qarşısını alır.
+2022-ci ilin mart ayından etibarən framework Walmart, Apple, Nike, Netflix, TikTok, Uber, Lyft, Twitch, Hulu, HBOmax, AT&T, Ticket Master, Nintendo, Hilton, Nvidia, Vodafone və 
+Starbucks da daxil olmaqla bir çox böyük web saytlar tərəfindən istifadə olunur.
+
+All Companies - https://nextjs.org/showcase (that used next.js)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+YOUTUBE VIDEO 11mins NEXT.JS - https://www.youtube.com/watch?v=Sklc_fQBmcs&ab_channel=Fireship ............. NOTES!
+
+seo with zero configuration...
+-----------------NƏYƏ GÖRƏ NEXT.JS -ə EHTİYAC YARANDI? -----------------------
+React.JS downside - Client-Side rendering zamanı content index.html-də əlçatan olmur və buna görə də SEO robotları contenti oxuya bilmir, bu isə SEO-da problem çıxarır.
+	- User content-i çox olan bir səhifəyə daxil olduqda yüklənmə biraz gecikə bilər
+
+
+-------------------------VIDEO NOTES---------------------------
+
+1. https://www.youtube.com/watch?v=0N7BbMli_rU - Turkce 13min video
+	- Vercel terefinden yaradılıb və bəzi hazır konfiqurasiyaları var. 
+	Image optimization, 
+	Hybrid: SSR(static site generation) & SSR(server side rendering)
+	Fast Refresh,
+	TypeScript Support,CSS Support,
+	File-System Route
+
+
+
+
+
+
+
